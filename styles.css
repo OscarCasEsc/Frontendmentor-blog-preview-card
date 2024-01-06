@@ -4,10 +4,11 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     font-family: 'Figtree', sans-serif;
     padding: 0;
     margin: 0;
+    position: relative;
 }
 main {
     background-color: hsl(0, 0%, 100%);
@@ -17,23 +18,26 @@ main {
     width: 350px;
     box-shadow: 15px 15px hsl(0, 0%, 7%);
 }
+main > figure {
+    margin: 0;
+}
 main > img {
     width: 100%;
     border-radius: 10px;
 }
-main > div > h1 {
+main > section > h1 {
     font-size: 25px;
 }
-main > div > h1:hover {
+main > section > h1:hover {
     font-size: 25px;
     color: hsl(47, 88%, 63%);
     cursor: pointer;
 }
-main > div > p {
+main > section > p {
     font-size: 16px;
     color: hsl(0, 0%, 50%)
 }
-main > div >.pill {
+main > section >.pill {
     background-color: hsl(47, 88%, 63%);
     padding: 5px 10px;
     width: fit-content;
@@ -41,25 +45,26 @@ main > div >.pill {
     font-weight: 800;
     margin: 20px 0px;
 }
-main > div > .date {
+main > section > .date {
     color: hsl(0, 0%, 7%);
     font-weight: 600;
 }
-main > .div-author {
+main > .footer-author {
     display: flex;
     align-items: center; 
     gap:10px;
     margin-top: 20px;
 }
-main > .div-author > img {
+main > .footer-author > img {
     width: 30px;  
 }
-main > .div-author > .author {
+main > .footer-author > .author {
     font-weight: 800;  
 }
 aside {
-    position: absolute;
-    bottom: 5px;
+    position: relative;
+    bottom: -20px;
+
 }
 
 /* Mobile media queries */
@@ -67,10 +72,10 @@ aside {
     body > main, body > aside {
         width: 250px;
     }
-    main > div > h1 {
+    main > section > h1 {
         font-size: 20px;
     }
-    main > div > h1:hover {
+    main > section > h1:hover {
         font-size: 20px;
     }
 }
